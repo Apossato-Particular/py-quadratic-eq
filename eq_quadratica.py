@@ -59,7 +59,7 @@ print( 'Equação: ' + txtEquacao )
 print()
 
 delta = bsk.calculaDelta(a,b,c)                             #-- calcula delta da equação
-print('Delta = ' + str(delta) + '.')                        #-- exibe o valor de delta
+print('Delta = ' + str(round(delta,2)) + '.')                        #-- exibe o valor de delta
 print('Delta:', bsk.validaDelta(delta))                     #-- valida valor obtido para delta
 print('A:'    , bsk.validaA(a))                             #-- valida valor obtido para a
 print('C:'    , bsk.validaC(c))                             #-- valida valor obtido para c
@@ -69,12 +69,12 @@ if delta >= 0:
     # CALCULO DAS RAÍZES
     x1 = bsk.calculaX1(a,b,c,delta)                         #-- calcula raíz 1 da equação
     x2 = bsk.calculaX2(a,b,c,delta)                         #-- calcula raíz 2 da equação
-    print('Raízes: x1 = ' + str(x1) + ' e x2 = ' + str(x2) + '.')
+    print('Raízes: x1 = ' + str(round(x1,2)) + ' e x2 = ' + str(round(x2,2)) + '.')
 
     # VÉRTICE DA PARÁBOLA
     xv = bsk.verticeX(a,b)                                  #-- calcula ponto X do vértice da parábola
     yv = bsk.verticeY(a,delta)                              #-- calcula ponto Y do vértice da parábola
-    print('Vértice da parábola em (' + str(xv) + ',' + str(yv) + ').')
+    print('Vértice da parábola em (' + str(round(xv,2)) + ',' + str(round(yv,2)) + ').')
     print()
 
     # PONTOS BÁSICOS PARA GRÁFICO
@@ -101,7 +101,7 @@ if delta >= 0:
 
     # INICIANDO GRÁFICO
     plot    = mplot.figure(                                 #-- cria figura principal do gráfico (plot)
-        num='ESG -' + txtEquacao        #-- insere título na janela do gráfico
+        num='ESG | ' + txtEquacao        #-- insere título na janela do gráfico
     )                 
     subplot = plot.add_subplot(111)                         #-- cria figura secundária do gráfico (subplot)
 
@@ -128,7 +128,7 @@ if delta >= 0:
         )
         pontosBasicosLegenda.append(ponto[2])               #-- ponto[2] = legenda
         print(
-            ' '+str(ponto[2])+': ('+str(ponto[0])+','+str(ponto[1])+')'
+            ' '+str(ponto[2])+': ('+str(round(ponto[0],2))+','+str(round(ponto[1],2))+')'
         )                                                   #-- imprime no console pontos de referência
 
     # INSERE LEGENDA DOS PONTOS BÁSICOS
