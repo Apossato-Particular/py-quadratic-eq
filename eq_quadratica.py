@@ -59,7 +59,7 @@ print( 'Equação: ' + txtEquacao )
 print()
 
 delta = bsk.calculaDelta(a,b,c)                             #-- calcula delta da equação
-print('Delta = ' + str(round(delta,2)) + '.')                        #-- exibe o valor de delta
+print('Delta = ' + str(round(delta,2)) + '.')               #-- exibe o valor de delta
 print('Delta:', bsk.validaDelta(delta))                     #-- valida valor obtido para delta
 print('A:'    , bsk.validaA(a))                             #-- valida valor obtido para a
 print('C:'    , bsk.validaC(c))                             #-- valida valor obtido para c
@@ -101,7 +101,7 @@ if delta >= 0:
 
     # INICIANDO GRÁFICO
     plot    = mplot.figure(                                 #-- cria figura principal do gráfico (plot)
-        num='ESG | ' + txtEquacao        #-- insere título na janela do gráfico
+        num='ESG | ' + txtEquacao                           #-- insere título na janela do gráfico
     )                 
     subplot = plot.add_subplot(111)                         #-- cria figura secundária do gráfico (subplot)
 
